@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SongDatabaseController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <Label text="Title" />
+            <TextField fx:id="title" onAction="#visible" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <Label text="Artist" />
+            <TextField fx:id="artist" onAction="#visible" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <Label text="Year" />
+            <TextField fx:id="year" onAction="#visible" />
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+               <children>
+                  <Button fx:id="ok" mnemonicParsing="false" onAction="#ok" onKeyPressed="#visible" text="Ok" />
+                  <Button fx:id="clear" mnemonicParsing="false" onAction="#clear" text="Clear" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <TextArea fx:id="database" prefHeight="200.0" prefWidth="200.0" />
+   </children>
+</VBox>
